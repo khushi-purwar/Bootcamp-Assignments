@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BioData-Form</title>
+</head>
+
+<body>
+    <h1>
+        <center>My Bio Data</center>
+    </h1>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First Name : </label>
+            <input type="text" id=fname name=fn placeholder="First Name" required>
+            &nbsp; &nbsp; &nbsp;
+            <label for="lname">Last Name : </label>
+            <input type="text" id=lname name=ln placeholder="Last Name" required>
+
+            <br>
+            <br>
+
+            Gender : &nbsp; &nbsp;
+            <label for="ml">Male</label>
+            <input type="radio" id=ml name=gender>
+            <label for="fl">Femle</label>
+            <input type="radio" id=fl name=gender>
+            <label for="oth">Others</label>
+            <input type="radio" id=oth name=gender>
+
+            <br>
+            <br>
+
+            <label>Date of Birth : </label>
+            <input type="date">
+
+            <br>
+            <br>
+
+            <label for="eml">Email : </label>
+            <input type="email" id="eml" placeholder="Enter Your Email" required>
+
+            <br>
+            <br>
+
+            <label for="tel">Phone : </label>
+            <input type="tel" id="tel" placeholder="+91" maxlength="10" required>
+
+            <br>
+            <br>
+
+            <label for="hgt">Height : </label>
+            <input type="number" id="hgt" placeholder="Height in Feets" min=0>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Education</legend>
+
+            <label for="scn">School Name : </label>
+            <input type="text" id="scn" placeholder="School Name" required>
+
+            <br>
+            <br>
+
+            <label for="class">Class : </label>
+            <input type="number" id="class" placeholder="Enter Class" required>
+
+            <br>
+            <br>
+
+            <label>Stream : </label>
+            <select>
+                <option>Stream</option>
+                <option>PCM</option>
+                <option>PCB</option>
+                <option>COMMERCE</option>
+                <option>ARTS</option>
+            </select>
+
+
+            <br>
+            <br>
+
+            <label>Marksheet : </label>
+            <input type="file" required>
+        </fieldset>
+
+        <br>
+        <center>
+            <input type="submit" >
+
+        </center>
+        
+
+    </form>
+</body>
+
+</html>
