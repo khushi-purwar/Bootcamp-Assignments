@@ -1,0 +1,60 @@
+
+
+h1 {
+
+background-color: black;
+height: 100px;
+color: rgb(246, 250, 0);
+font-size: 50px;
+
+
+}
+
+#special{
+
+    width: 500px;
+    text-align: center;
+    display: inline-block;
+   margin-left: 700px;
+    
+}
+
+img{
+    width: 500px;
+padding-top: 100px;
+position: fixed;
+/* top: -40px; */
+left: 120px;
+
+
+
+}  
+h3{
+    border: 2px dashed rgb(139, 9, 139);
+    background-color: gainsboro;
+   
+    border-radius: 10px;
+    position: sticky;
+    top: 0px;
+    height: 30px;
+    padding-top: 20px;
+
+}
+
+p{
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    word-spacing: 40px;
+}
+p:hover{
+    background-color: rgb(181, 248, 165);
+    font-size: large;
+    color: rgb(250, 0, 0);
+    font-weight: bold;
+     
+}
+p::before{
+    content: "\2706";
+    padding-right: 23px;
+}
+
