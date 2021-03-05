@@ -7,7 +7,7 @@ h1 {
     text-align: center;
     font-size: 30px;
     transition: 3s;
-    transition-delay: 15s ;
+    transition-delay: 5s ;
     transform: scale(1);
 }
 section {
@@ -35,8 +35,8 @@ button:hover {
     border: 1.5px solid rgb(217, 255, 49);
     transform: translateY(-5px);
     box-shadow: 0px 4px 6px rgb(217, 255, 49);
-   cursor: pointer;
-   color: white;
+    cursor: pointer;
+    color: white;
 
 }
 
