@@ -1,0 +1,39 @@
+
+
+.container {
+    margin-top: 63px ;
+}
+
+.d-grid {
+    margin: 16px;
+}
+
+.d-grid .btn {
+    background-color: #FFC107;
+    border-radius: 24px;
+    
+}
+
+.con {
+    margin: 0 123px;
+    height:520px ;
+   
+}
+
+.con .row {
+    margin: 0px auto;
+    width: 65%;
+    height: 110px;
+    
+}
+
+.con .form-control {
+    margin-top: 10px;
+   
+    border-radius: 25px;
+    border-color: black;
+    /* background-color: #393939; */
+    color: black;
+    
+}
+
