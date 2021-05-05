@@ -1,0 +1,73 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/navbar') %> 
+      
+        <div class="container mt-5 w-75 p-3">
+          <%- include("../partials/flash")%>
+         
+            <div class="card mb-3 p-2">
+              
+                <img src="<%= foundBlog.img %>" class="card-img-top p-3 " alt="..." style="height: 350px;">
+                <div class="card-body">
+                  <h5 class="card-title"><%= foundBlog.title %></h5>
+                  <p class="card-text"><%= foundBlog.bodycontent %></p>
+                  <p class="card-text"><small class="text-muted">Written By - <%= foundBlog.writer%></small></p>
+                  <a href="/blogs/<%= foundBlog._id %>/edit" class="btn btn-warning mb-2">Edit</a> 
+                  
+                    <form action="/blogs/<%= foundBlog._id%>?_method=DELETE" method="POST">
+                      <button class="btn btn-danger">Delete</button>
+                  </form>
+                 
+                 
+                </div>
+              </div>
+            
+        </div>
+
+        <div class="container w-75 mb-5">
+         
+            <div class="w-75 mb-5 m-auto" >
+              <h4>Leave a Review</h4>
+  
+              <form action="/blogs/<%= foundBlog._id %>/review"  class="needs-validation" method="POST" " novalidate>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type="range" class="form-range" min="0" max="5" name="rating" id="rating">
+                </div>
+            
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc" cols="35" rows="3" name="comment" required></textarea>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+               
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+           
+            <div class="w-75 m-auto">
+              <h3 class="text-center p-3" style="color: rgb(75, 5, 133);">Ratings & Reviews</h3>
+              <%for(let r of foundBlog.reviews){%> 
+              <div class="card mb-2">
+                <div class="card-header">
+                 UserName
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    
+                    <h6>Rating : <%=r.rating  %>/5 </h6>
+                    <p>Comment : <%= r.comment %>  </p>
+                    
+                  </blockquote>
+                </div>
+              
+            </div>
+            <% } %> 
+            </div>
+              
+       
+        </div>
+          
+
+<%- include('../partials/footer') %> 
