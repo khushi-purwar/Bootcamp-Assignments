@@ -1,0 +1,26 @@
+<%- include("../partials/header")%> 
+<%- include('../partials/navbar') %> 
+      
+      <div class="container mt-5 p-5">
+        <%- include("../partials/flash")%>
+        <%for(let b of blogs){%>
+      <div class="card mb-3 mw-100 p-2 shadow-sm p-3 mb-5 bg-body rounded" style="max-width:100vw; height: 280px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="index" src="<%= b.img %>" alt="..." width="340" height="245">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= b.title %></h5>
+              <p class="card-text"><%= b.bodycontent.substring(0,300)%>...</p>
+              <p class="card-text"><small class="text-muted">Written By - <%= b.writer %></small></p>
+              <a href="/blogs/<%= b._id %> " class="btn btn-outline-primary mb-1">Read More</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <%}%>
+</div>
+
+
+<%- include('../partials/footer') %>   
